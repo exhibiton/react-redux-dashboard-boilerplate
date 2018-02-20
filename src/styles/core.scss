@@ -1,0 +1,35 @@
+// Import vendor libraries from node_modules here
+@import '~bootstrap/scss/bootstrap';
+@import '~react-select/dist/react-select.css';
+@import '~toastr/build/toastr.css';
+@import '~font-awesome/css/font-awesome.min.css';
+
+// Base classes are fundamental building blocks based on the site design
+@import 'base/colors';
+@import 'base/typography';
+@import 'base/layout';
+
+// Fonts
+@import 'fonts/fonts.css';
+
+// UI Components are generic and reusable, and only relies on base and vendor css
+
+// Components can rely on UI components, base, and vendor css
+
+// Default page settings
+html {
+  font-size: 16px;
+
+  // Since rem is used for all font, height, and width measurements,
+  // this decreases the spacing when viewed on a small screen
+  @include media-breakpoint-down(sm) {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: 'Proxima Nova', sans-serif;
+  line-height: 1.2;
+  min-height: 100vh;
+  color: #2a2c41;
+}

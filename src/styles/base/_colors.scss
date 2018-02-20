@@ -1,0 +1,50 @@
+$color-map: (
+  'yellow': #ffed98,
+  'grey': #787882,
+  'dark': #2a2c41,
+  'red': #d9534f,
+);
+
+@mixin color-classes($color-name, $color) {
+  .color-#{$color-name} {
+    color: $color;
+  }
+
+  .color-bg-#{$color-name} {
+    background-color: $color;
+  }
+
+  .color-bd-#{$color-name} {
+    border: 1px solid $color;
+  }
+
+  .color-bdt-#{$color-name} {
+    border-top: 1px solid $color;
+  }
+
+  .color-bdb-#{$color-name} {
+    border-bottom: 1px solid $color;
+  }
+
+  .color-bdl-#{$color-name} {
+    border-left: 1px solid $color;
+  }
+
+  .color-bdr-#{$color-name} {
+    border-right: 1px solid $color;
+  }
+
+  .color-bdh-#{$color-name} {
+    border-left: 1px solid $color;
+    border-right: 1px solid $color;
+  }
+
+  .color-bdv-#{$color-name} {
+    border-bottom: 1px solid $color;
+    border-top: 1px solid $color;
+  }
+}
+
+@each $color-name, $color in $color-map {
+  @include color-classes($color-name, $color);
+}

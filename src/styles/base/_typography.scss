@@ -1,0 +1,15 @@
+$font-size-map: (
+  '10': .625rem,
+  '12': .75rem,
+  '14': .875rem,
+);
+
+@each $font-size-number, $font-size in $font-size-map {
+  .t#{$font-size-number} {
+    font-size: $font-size;
+  }
+}
+
+.text-underline {
+  text-decoration: underline;
+}
